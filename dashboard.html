@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move & Mind Wellness - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Sections -->
+    <section class="dashboard-section" id="daily-activity">
+        <div class="section-content">
+            <h2>Daily Activity Recommendations</h2>
+            <p id="activityRecommendation">Loading...</p> <!-- Placeholder for API data -->
+        </div>
+    </section>
+
+    <section class="dashboard-section" id="weather-suggestions">
+        <div class="section-content">
+            <h2>Weather-Based Suggestions</h2>
+            <p>Discover outdoor activities based on the current weather.</p>
+    
+            <!-- Input field and button to search for a city -->
+            <input type="text" id="countryInput" placeholder="Enter a city" />
+            <button id="fetchWeatherBtn">Get Weather Suggestions</button>
+    
+            <!-- Display weather suggestion -->
+            <p id="weatherSuggestion">Weather suggestions will appear here...</p>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Move & Mind Wellness. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

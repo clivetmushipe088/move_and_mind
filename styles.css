@@ -1,0 +1,280 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply background image and ensure it covers the entire page */
+html, body {
+    height: 100%; /* Full height of the page */
+    margin: 0;
+    position: relative; /* Positioning for the overlay */
+    background: url('images/wallpaper1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+}
+
+/* Faded overlay for the background */
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark fade effect */
+    z-index: -1; /* Make sure the overlay is behind content */
+}
+
+/* Navigation Bar */
+nav {
+    background: transparent; /* Transparent navbar */
+    padding: 1rem;
+    text-align: center;
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 10; /*Keeps navbar above the content */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /*Ensures text is visible */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hover color */
+nav a:hover {
+    color: #ff007f; /* Pink accent on hover */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Ensure only the background image shows */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* "Get Started" Button */
+.cta {
+    background-color: #3b3a3a;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background-color: #e2e600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: transparent; /* Transparent footer */
+    color: #fff;
+    margin-top: 2rem;
+    z-index: 1; /* Ensures footer content is above the background */
+}
+
+.dashboard-section {
+    height: 100vh; /* Full height of each section */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    scroll-snap-align: start; /* Ensures each section snaps into place */
+    position: relative;
+    overflow: hidden; /* Hide content that overflows the section */
+}
+
+/*Light background for alternating sections */
+.dashboard-section:nth-child(even) {
+    background: rgba(35, 35, 35, 0.8); /*Light background */
+}
+
+/* Rounded square border around each section */
+.section-content {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 2rem;
+    width: 80%; /* Controls the width of the section */
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*Heading and Text Styling */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Smooth Scroll Behavior (for body) */
+html {
+    scroll-behavior: smooth; /* Smooth scroll between sections */
+    scroll-snap-type: y mandatory; /* Enforces snapping on vertical scrolling */
+}
+
+/*Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: transparent;
+    color: #fff;
+    margin-top: 2rem;
+    z-index: 1;
+}
+
+/*Hide scrollbar for a cleaner design */
+body {
+    overflow-y: scroll;
+    height: 100vh; /* Ensure the body has a full height */
+    margin: 0;
+    padding: 0;
+}
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
+    background: url('images/wallpaper1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the page */
+    position: relative;
+}
+
+.about-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Faded overlay */
+    z-index: -1; /* Ensures the overlay is behind content */
+}
+
+.about-content {
+    background: #fff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 2rem;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.about-content h1, .about-content h2 {
+    color: #333; /* Dark text */
+    margin-bottom: 1rem;
+}
+
+.about-content p, .about-content li {
+    color: #555; /* Softer dark text */
+    line-height: 1.6;
+}
+
+.about-content ul {
+    list-style: disc;
+    margin: 1rem 0;
+    padding-left: 1.5rem; /* Indent list items */
+}
+
+.about-content strong {
+    color: #ff007f; /* Accent color for highlights */
+}
+/* Next Button Styling */
+.next-button {
+    background-color: #3b3a3a; /* Dark gray background */
+    color: #fff; /* White text */
+    padding: 0.8rem 2rem; /* Padding for size */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem; /* Text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth hover transition */
+    margin-top: 1.5rem; /* Space above the button */
+}
+
+.next-button:hover {
+    background-color: #e2e600; /* Bright yellow hover effect */
+}
+/* Contact Section Styling */
+#contact-info {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.contact-message {
+    background-color: white;
+    padding: 2rem;
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+}
+
+.contact-message p {
+    margin-bottom: 1rem;
+}
+
+.contact-message a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+.contact-message a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: transparent; /* Transparent footer */
+    color: #fff;
+    margin-top: 2rem;
+}
